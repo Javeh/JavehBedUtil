@@ -3,8 +3,6 @@ package net.javeh.voucher;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import net.javeh.javehtp.WarpsCommand;
-
 public class Voucher extends JavaPlugin{
 	
 	private static boolean voucherLoggedIn = false;

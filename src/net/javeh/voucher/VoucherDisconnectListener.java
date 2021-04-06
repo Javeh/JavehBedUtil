@@ -3,6 +3,7 @@ package net.javeh.voucher;
 import java.util.UUID;
 
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -22,10 +23,11 @@ public class VoucherDisconnectListener implements Listener {
 		
 		if(e.getPlayer().getUniqueId().toString().equals(plugin.getConfig().getString("VoucherUUID"))) {
 			Voucher.setVoucherStatus(false);
-			Player vouchee = Bukkit.getPlayer(UUID.fromString(plugin.getConfig().getString("VoucheeUUID")));
+			
+			OfflinePlayer vouchee = Bukkit.getPlayer(UUID.fromString(plugin.getConfig().getString("VoucheeUUID")));
 			
 			if(vouchee.isOnline()) {
-				vouchee.kickPlayer("Bye");
+				((Player) vouchee).kickPlayer("Bye");
 			}
 		}
 		
