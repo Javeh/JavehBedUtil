@@ -1,4 +1,8 @@
-name: JavehBedUtil
-main: net.javeh.bedutil.JavehBedUtil
+name: Voucher
+main: net.javeh.voucher.Voucher
 version: 1.0
 api-version: 1.16
+commands:
+   Voucher:
+      description: Voucher System.
+      usage: /<command> <arguments>
